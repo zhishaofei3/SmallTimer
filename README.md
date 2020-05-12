@@ -1,12 +1,12 @@
-# MyTimer
-ES6 MyTimer
+# SmallTimer
+SmallTimer
 
 ````javascript
-import MyTimer from "./MyTimer"
+import SmallTimer from "small-timer"
 
-const timer = new MyTimer(1000, 10)
-timer.addEventListener(MyTimer.TIMER, onTimer)
-timer.addEventListener(MyTimer.TIMER_COMPLETE, onComplete)
+const timer = new SmallTimer(1000, 10)
+timer.addEventListener(SmallTimer.TIMER, onTimer)
+timer.addEventListener(SmallTimer.TIMER_COMPLETE, onComplete)
 timer.start()
 // timer.pause()
 // timer.reset()
