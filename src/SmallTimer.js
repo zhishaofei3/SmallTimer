@@ -17,7 +17,7 @@ export default class SmallTimer extends EventDispatcher {
   static TIMER = 'TIMER'
   static TIMER_COMPLETE = 'TIMER_COMPLETE'
 
-// 使用指定的 delay 和 repeatCount 状态构造新的 Timer 对象，建议 delay 不要低于 20 毫秒。
+// 使用指定的 delay 和 repeatCount 状态构造新的 SmallTimer 对象，建议 delay 不要低于 20 毫秒。
   constructor(delay, count = Number.POSITIVE_INFINITY, data) {
     super()
     this.delay = Math.floor(delay)
@@ -47,7 +47,7 @@ export default class SmallTimer extends EventDispatcher {
         this.lastBeforeTimestamp = +new Date()
         this._once()
         this.dispatchEvent({
-          type: Timer.TIMER,
+          type: SmallTimer.TIMER,
           target: this,
           currentTarget: this,
           currentCount: this.currentCount,
@@ -56,7 +56,7 @@ export default class SmallTimer extends EventDispatcher {
         })
       } else {
         this.dispatchEvent({
-          type: Timer.TIMER_COMPLETE,
+          type: SmallTimer.TIMER_COMPLETE,
           target: this,
           currentTarget: this,
           currentCount: this.currentCount,
