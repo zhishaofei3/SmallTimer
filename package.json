@@ -1,8 +1,8 @@
 {
   "name": "small-timer",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A count down util, support start pause resume restore methods",
-  "main": "dist/SmallTimer.js",
+  "main": "dist/SmallTimer.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
