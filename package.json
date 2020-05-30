@@ -1,10 +1,12 @@
 {
   "name": "small-timer",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A count down util, support start pause resume restore methods",
-  "main": "src/SmallTimer.js",
+  "main": "dist/SmallTimer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build2": "babel --out-file ./dist/SmallTimer.min.js src/SmallTimer.js"
   },
   "repository": {
     "type": "git",
@@ -26,8 +28,8 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/preset-stage-0": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
     "babel-loader": "^8.1.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.43.0",
@@ -37,6 +39,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@zhishaofei3/eventdispatcher": "^1.0.4"
+    "@zhishaofei3/eventdispatcher": "^1.1.1"
   }
 }
